@@ -21,6 +21,15 @@ class LinkedList:
                 llstr+=str(itr.data)+'---->'
                 itr=itr.next
             print(llstr)
+    # Inserting at the end
+    def insert_at_tail(self,data):
+        if self.head is None:
+            self.head=Node(data,None)
+            return
+        itr=self.head
+        while itr.next:
+            itr=itr.next
+        itr.next = Node(data,None)
 #Creating LinkedList
 ll=LinkedList()
 ll.insert_at_begining(5)
@@ -29,6 +38,7 @@ ll.insert_at_begining(7)
 ll.insert_at_begining(8)
 ll.insert_at_begining(9)
 ll.insert_at_begining(10)
+ll.insert_at_tail(121)
 ll.printList()
 
 
